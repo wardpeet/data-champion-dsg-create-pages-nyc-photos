@@ -6,6 +6,14 @@
 
 ⚙️ This repo is based on [Gatsby's minimal demo](https://github.com/gatsby-inc/gatsby-demo-minimal)
 
+## NYC Subway Stations
+
+[http://nycpulse.herokuapp.com/api](http://nycpulse.herokuapp.com/api)
+
+## NYC Event Calendar
+
+[https://api-portal.nyc.gov/docs/services/event-calendar/operations/categories](https://api-portal.nyc.gov/docs/services/event-calendar/operations/categories)
+
 <p align="center">
   <a href="https://www.gatsbyjs.com">
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
