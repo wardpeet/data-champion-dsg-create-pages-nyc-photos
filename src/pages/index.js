@@ -34,7 +34,10 @@ const Page = ({
               className="cursor-pointer flex flex-col shadow-md rounded-lg bg-gray-50 transform transition ease-in-out duration-300 hover:-translate-y-1 hover:shadow-lg hover:bg-white"
             >
               <Link to={slug} className="grid grid-cols-1fr-auto items-center p-8">
-                <h2 className="text-2xl font-black">{properties.name}</h2>
+                <h2 className="grid grid-cols-auto-1fr gap-2 text-2xl font-black">
+                  <span className="text-brand-primary">{`#${index + 1}`}</span>
+                  {properties.name}
+                </h2>
                 <span role="img" aria-label="Eyes" className="text-3xl">
                   👀
                 </span>
