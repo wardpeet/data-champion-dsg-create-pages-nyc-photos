@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import LeftArrow from './left-arrow';
-import RightArrow from './right-arrow';
+import LeftArrow from '../components/left-arrow';
+import RightArrow from '../components/right-arrow';
 
 const Template = ({
   data: {
