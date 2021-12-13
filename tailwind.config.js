@@ -12,6 +12,12 @@ module.exports = {
       gridTemplateColumns: {
         ['auto-1fr']: 'auto 1fr',
         ['1fr-auto']: '1fr auto'
+      },
+      width: {
+        200: '200px'
+      },
+      height: {
+        200: '200px'
       }
     }
   },
