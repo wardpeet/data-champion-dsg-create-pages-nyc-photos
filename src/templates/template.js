@@ -28,7 +28,7 @@ const Template = ({
         <h1 className="font-black text-3xl ">{description}</h1>
         <p className="text-sm font-normal">{alt_description}</p>
         <div className="grid grid-cols-auto-1fr gap-4 items-end text-sm">
-          <a href={portfolio_url} target="_blank" rel="noreferrer" className="grid grid-cols-auto-1fr gap-1 items-center hover:text-purple-200 transition">
+          <a href={portfolio_url} target="_blank" rel="noreferrer" className="cursor-pointer grid grid-cols-auto-1fr gap-1 items-center hover:text-purple-200 transition">
             <User />
             {name}
           </a>
