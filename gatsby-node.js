@@ -22,7 +22,7 @@ exports.sourceNodes = async ({ actions: { createNode }, createContentDigest }) =
     orientation: 'landscape'
   });
 
-  data.response.results.forEach(async (item) => {
+  data.response.results.forEach((item) => {
     const { id, blur_hash } = item;
 
     createNode({
