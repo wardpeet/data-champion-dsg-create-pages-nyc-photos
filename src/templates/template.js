@@ -11,7 +11,7 @@ const Template = ({
     nycPhoto: {
       description,
       alt_description,
-      user: { name },
+      user: { name, portfolio_url },
       urls: { regular },
       likes
     }
@@ -28,10 +28,10 @@ const Template = ({
         <h1 className="font-black text-3xl ">{description}</h1>
         <p className="text-sm font-normal">{alt_description}</p>
         <div className="grid grid-cols-auto-1fr gap-4 items-end text-sm">
-          <div className="grid grid-cols-auto-1fr gap-1 items-center">
+          <a href={portfolio_url} target="_blank" rel="noreferrer" className="grid grid-cols-auto-1fr gap-1 items-center hover:text-purple-200 transition">
             <User />
             {name}
-          </div>
+          </a>
           <div className="grid grid-cols-auto-1fr gap-1 items-center">
             <Heart />
             {likes}
@@ -70,6 +70,7 @@ export const query = graphql`
       alt_description
       user {
         name
+        portfolio_url
       }
       urls {
         regular
