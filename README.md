@@ -1,14 +1,10 @@
-# TBC
+# Fetch Data from the Unsplash API and render using DSG
 
 👀 See the preview: [https://](https://)
 
 📝 Read the post on the Gatsby Blog: [...](https://)
 
 ⚙️ This repo is based on [Gatsby's minimal demo](https://github.com/gatsby-inc/gatsby-demo-minimal)
-
-## Old NYC Photos
-
-[http://spacetime.nypl.org/#data-oldnyc](http://spacetime.nypl.org/#data-oldnyc)
 
 ## Unsplash API
 
