@@ -66,6 +66,7 @@ const Template = ({
 export const query = graphql`
   query ($id: String) {
     nycPhoto(id: { eq: $id }) {
+      id
       description
       alt_description
       user {
