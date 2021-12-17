@@ -22,8 +22,6 @@ exports.sourceNodes = async ({ actions: { createNode }, createContentDigest }) =
     orientation: 'landscape'
   });
 
-  console.log(data);
-
   data.response.results.forEach((item) => {
     const { id, blur_hash } = item;
 
@@ -79,14 +77,3 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     });
   });
 };
-
-createPage({
-  path: slug,
-  component: path.resolve('src/templates/template.js'),
-  context: {
-    id: id,
-    prev: index === 0 ? null : previous,
-    next: index === edges.length - 1 ? null : next
-  },
-  defer: likes < 100
-});
