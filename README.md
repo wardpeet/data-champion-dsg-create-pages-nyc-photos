@@ -1,8 +1,8 @@
 # Fetch Data from the Unsplash API and render using DSG
 
-👀 See the preview: [https://](https://)
+👀 See the preview: [https://datachampiondsgcpnycphotos.gatsbyjs.io](https://datachampiondsgcpnycphotos.gatsbyjs.io/)
 
-📝 Read the post on the Gatsby Blog: [...](https://)
+📝 Read the post on the Gatsby Blog: [https://www.gatsbyjs.com/blog/fetch-data-from-the-unsplash-api-and-render-using-dsg](https://www.gatsbyjs.com/blog/fetch-data-from-the-unsplash-api-and-render-using-dsg)
 
 ⚙️ This repo is based on [Gatsby's minimal demo](https://github.com/gatsby-inc/gatsby-demo-minimal)
 
