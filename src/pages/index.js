@@ -80,7 +80,7 @@ const Page = ({
 
 export const query = graphql`
   {
-    allNycPhoto(sort: { order: DESC, fields: likes }) {
+    allNycPhoto {
       nodes {
         slug
         description

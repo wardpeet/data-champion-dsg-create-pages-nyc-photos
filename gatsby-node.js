@@ -22,19 +22,21 @@ exports.sourceNodes = async ({ actions: { createNode }, createContentDigest }) =
     orientation: 'landscape'
   });
 
-  data.response.results.forEach((item) => {
-    const { id, blur_hash } = item;
+  data.response.results
+    .filter((item) => item.description !== null)
+    .forEach((item) => {
+      const { id, blur_hash } = item;
 
-    createNode({
-      ...item,
-      id: id,
-      slug: `/${slugify(blur_hash)}`,
-      internal: {
-        type: 'NycPhoto',
-        contentDigest: createContentDigest(item)
-      }
+      createNode({
+        ...item,
+        id: id,
+        slug: `/${slugify(blur_hash)}`,
+        internal: {
+          type: 'NycPhoto',
+          contentDigest: createContentDigest(item)
+        }
+      });
     });
-  });
 };
 
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
@@ -44,7 +46,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     }
   } = await graphql(`
     {
-      allNycPhoto(filter: { description: { ne: null } }) {
+      allNycPhoto {
         edges {
           node {
             id
