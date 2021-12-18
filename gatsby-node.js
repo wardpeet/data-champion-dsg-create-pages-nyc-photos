@@ -27,7 +27,7 @@ exports.sourceNodes = async ({ actions: { createNode }, createContentDigest }) =
 
     createNode({
       ...item,
-      id: `${id}`,
+      id: id,
       slug: `/${slugify(blur_hash)}`,
       internal: {
         type: 'NycPhoto',
@@ -66,10 +66,11 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     const { id, slug, likes } = node;
 
     createPage({
-      path: `${slug}`,
+      path: slug,
       component: path.resolve('src/templates/template.js'),
       context: {
         id: id,
+        pagePath: slug,
         prev: index === 0 ? null : previous,
         next: index === edges.length - 1 ? null : next
       },
