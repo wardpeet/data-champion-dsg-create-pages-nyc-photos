@@ -23,12 +23,16 @@ exports.sourceNodes = async ({ actions: { createNode }, createContentDigest }) =
   });
 
   data.response.results.forEach((item) => {
-    const { id, blur_hash } = item;
+    const {
+      id
+      //blur_hash
+    } = item;
 
     createNode({
       ...item,
       id: `${id}`,
-      slug: slugify(blur_hash),
+      slug: `/${id}`,
+      // slug: slugify(blur_hash),
       internal: {
         type: 'NycPhoto',
         contentDigest: createContentDigest(item)

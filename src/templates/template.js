@@ -6,6 +6,8 @@ import RightArrow from '../components/right-arrow';
 import Heart from '../components/heart';
 import User from '../components/user';
 
+import { truncateString } from '../utils';
+
 const Template = ({
   data: {
     nycPhoto: {
@@ -18,6 +20,8 @@ const Template = ({
   },
   pageContext
 }) => {
+  console.log(pageContext);
+
   return (
     <main>
       <div className="relative grid gap-4 bg-black text-white opacity-80 p-4 z-20 capitalize">
@@ -25,8 +29,8 @@ const Template = ({
           <LeftArrow />
           Back
         </Link>
-        <h1 className="font-black text-3xl ">{description}</h1>
-        <p className="text-sm font-normal">{alt_description}</p>
+        <h1 className="font-black text-3xl ">{truncateString(description, 100)}</h1>
+        <p className="text-sm font-normal">alt_description}</p>
         <div className="grid grid-cols-auto-1fr gap-4 items-end text-sm">
           <a href={portfolio_url} target="_blank" rel="noreferrer" className="cursor-pointer grid grid-cols-auto-1fr gap-1 items-center hover:text-purple-200 transition">
             <User />
@@ -41,14 +45,14 @@ const Template = ({
       <div className="absolute top-0 left-0 w-full h-screen z-10">
         <div className="flex justify-between items-center w-full h-screen">
           {pageContext.prev ? (
-            <Link className="bg-brand-primary text-white p-4 font-bold capitalize" to={`/${pageContext.prev.slug}`}>
+            <Link className="bg-brand-primary text-white p-4 font-bold capitalize" to={pageContext.prev.slug}>
               <LeftArrow />
             </Link>
           ) : (
             <div />
           )}
           {pageContext.next ? (
-            <Link className="bg-brand-primary text-white p-4 font-bold capitalize" to={`/${pageContext.next.slug}`}>
+            <Link className="bg-brand-primary text-white p-4 font-bold capitalize" to={pageContext.next.slug}>
               <RightArrow />
             </Link>
           ) : (

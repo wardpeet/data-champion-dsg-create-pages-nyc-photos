@@ -4,13 +4,7 @@ import { graphql, Link } from 'gatsby';
 import Heart from '../components/heart';
 import User from '../components/user';
 
-const truncateString = (str) => {
-  if (str && str.length >= 100) {
-    return `${str.slice(0, 100)}...`;
-  } else {
-    return str;
-  }
-};
+import { truncateString } from '../utils';
 
 const Page = ({
   data: {
@@ -60,7 +54,7 @@ const Page = ({
                   <div className="grid gap-4 p-4">
                     <div className="text-lg sm:text-2xl font-black">
                       <span className="text-brand-primary">{`#${index + 1}`}</span>
-                      <h2 className="mb-2">{truncateString(description)}</h2>
+                      <h2 className="mb-2">{truncateString(description, 100)}</h2>
                       <p className="text-sm font-normal">{alt_description}</p>
                     </div>
                     <div className="grid grid-cols-auto-1fr gap-4 items-end text-sm">
