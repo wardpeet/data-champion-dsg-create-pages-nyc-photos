@@ -20,8 +20,6 @@ const Template = ({
   },
   pageContext
 }) => {
-  console.log(pageContext);
-
   return (
     <main>
       <div className="relative grid gap-4 bg-black text-white opacity-80 p-4 z-20 capitalize">
