@@ -46,7 +46,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     }
   } = await graphql(`
     {
-      allNycPhoto {
+      allNycPhoto(sort: { order: DESC, fields: likes }) {
         edges {
           node {
             id
