@@ -76,7 +76,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
         prev: index === 0 ? null : previous,
         next: index === edges.length - 1 ? null : next
       },
-      defer: likes < 100
+      defer: likes < 100 ? true : false
     });
   });
 };

@@ -25,7 +25,7 @@ const Page = ({
               Unsplash
             </a>
           </h2>
-          <span className="font-black">Black and hite photos tagged with NYC</span>
+          <span className="font-black">Black and white photos tagged with NYC</span>
         </div>
       </div>
       <ul className="grid gap-8">
