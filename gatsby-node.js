@@ -23,16 +23,12 @@ exports.sourceNodes = async ({ actions: { createNode }, createContentDigest }) =
   });
 
   data.response.results.forEach((item) => {
-    const {
-      id
-      //blur_hash
-    } = item;
+    const { id, blur_hash } = item;
 
     createNode({
       ...item,
       id: `${id}`,
-      slug: `/${id}`,
-      // slug: slugify(blur_hash),
+      slug: `/${slugify(blur_hash)}`,
       internal: {
         type: 'NycPhoto',
         contentDigest: createContentDigest(item)
@@ -70,7 +66,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     const { id, slug, likes } = node;
 
     createPage({
-      path: slug,
+      path: `${slug}`,
       component: path.resolve('src/templates/template.js'),
       context: {
         id: id,
